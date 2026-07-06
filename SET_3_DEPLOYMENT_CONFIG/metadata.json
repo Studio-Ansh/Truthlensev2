@@ -1,0 +1,8 @@
+{
+  "name": "Truthlens Verify",
+  "description": "An advanced neural verification platform engineered to analyze visual authenticity, trace cryptographic lineage logs, and detect deepfakes in digital media using GenAI models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

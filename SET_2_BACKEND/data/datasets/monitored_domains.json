@@ -1,0 +1,65 @@
+[
+  {
+    "domain": "natural-wellness-chronicle.biz",
+    "risk_level": "High",
+    "threat_type": "Medical Misinformation / Clickbait cures",
+    "average_authenticity": 8,
+    "total_scanned": 42,
+    "alert_message": "Flagged for spreading unscientific cancer, diabetes, and infectious disease 'miracle cures' linked to dietary supplement ad loops.",
+    "is_active_alert": true
+  },
+  {
+    "domain": "pine-creek-patriot.com",
+    "risk_level": "High",
+    "threat_type": "Civic & Election Deepfakes",
+    "average_authenticity": 5,
+    "total_scanned": 18,
+    "alert_message": "Frequently distributes face-swapped deepfakes and smart appliance conspiracy articles regarding local municipal voting structures.",
+    "is_active_alert": true
+  },
+  {
+    "domain": "scitech-nexus.co",
+    "risk_level": "High",
+    "threat_type": "Fabricated Emerging Tech",
+    "average_authenticity": 15,
+    "total_scanned": 29,
+    "alert_message": "Publishes sensationalist stories regarding non-existent technological breakthroughs to pump small-cap venture tokens.",
+    "is_active_alert": true
+  },
+  {
+    "domain": "climate-truth-blog.net",
+    "risk_level": "Medium",
+    "threat_type": "Climate Panic & Doomsday Conspiracies",
+    "average_authenticity": 25,
+    "total_scanned": 31,
+    "alert_message": "Exaggerates normal geological observations into apocalyptic world-ending threats to harvest high-volume clickbait traffic.",
+    "is_active_alert": false
+  },
+  {
+    "domain": "patriot-news-network.io",
+    "risk_level": "High",
+    "threat_type": "Geopolitical Audio-Visual Clones",
+    "average_authenticity": 12,
+    "total_scanned": 24,
+    "alert_message": "Promotes fabricated voice clones of European and world diplomats discussing covert energy deals and military movements.",
+    "is_active_alert": true
+  },
+  {
+    "domain": "gml-logistics.com",
+    "risk_level": "Low",
+    "threat_type": "None (Corporate Press)",
+    "average_authenticity": 98,
+    "total_scanned": 15,
+    "alert_message": "Verified authentic corporate communications regarding maritime trade.",
+    "is_active_alert": false
+  },
+  {
+    "domain": "financial-times-report.com",
+    "risk_level": "Low",
+    "threat_type": "None (Verified Journalism)",
+    "average_authenticity": 99,
+    "total_scanned": 142,
+    "alert_message": "Legitimate publisher of macro-economic, banking, and market data.",
+    "is_active_alert": false
+  }
+]

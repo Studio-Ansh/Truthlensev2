@@ -1,0 +1,57 @@
+{
+    "file_name": "sample_manipulated.mp4",
+    "file_path": "/app/applet/sample_manipulated.mp4",
+    "duration_seconds": null,
+    "metrics": {
+        "authenticity_score": 8.0,
+        "risk_level": "High Risk",
+        "confidence_score": 98.4,
+        "trust_index": 0.8
+    },
+    "forensics": {
+        "temporal_flicker": {
+            "variance": 0.0482,
+            "max_spike_ratio": 4.12,
+            "anomalous_frames": [
+                12,
+                13,
+                18
+            ],
+            "severity": "High",
+            "description": "Severe temporal flickering detected! Sudden frame transition spikes occurred at segment indexes [12, 13, 18]."
+        },
+        "fft_spectrum": {
+            "mean_energy": 842100.0,
+            "anomalous_peaks": true,
+            "severity": "High",
+            "description": "Unnatural high-frequency periodic lattice patterns identified in the frequency spectrum. This is a signature of GAN or Diffusion generative upsamplers."
+        },
+        "sensor_grain": {
+            "mean_ratio": 1.54,
+            "deviation_from_uniformity": 0.54,
+            "severity": "High",
+            "description": "Critical sensor grain mismatch detected! The focal region shows a 54.0% grain variation compared to the surrounding environment, confirming face-swap blending."
+        },
+        "blending_seams": {
+            "max_seam_intensity": 9.21,
+            "severity": "High",
+            "description": "Strong linear gradient seams found around the focal perimeter, indicating rectangular bounding-box masking boundaries."
+        },
+        "chrominance": {
+            "mean_chroma_ratio": 1.32,
+            "severity": "High",
+            "description": "Unnatural chrominance bleeding detected! Chromatic variance exceeds standard compression bounds, indicating synthesized lighting mismatch."
+        },
+        "overall_manipulated": true,
+        "confidence": 98.4,
+        "manipulation_score": 0.92,
+        "manipulated_region": "Facial center-bounding box (Face-Swap pipeline)",
+        "manipulation_type": "Deepfake Face Swap & GAN Face Synthesis",
+        "forensic_proof_points": [
+            "High-frequency grid noise pattern in frequency spectrum (FFT periodic spikes)",
+            "Significant camera grain difference between the facial area and background (Laplacian noise mismatch of 54%)",
+            "Heavy frame transitions flickering on face boundaries during rapid head rotation (temporal spikes)",
+            "High gradient linear borders detected around the subject contours (blending seams)"
+        ]
+    }
+}

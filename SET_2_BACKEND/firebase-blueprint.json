@@ -1,0 +1,147 @@
+{
+  "entities": {
+    "user": {
+      "title": "User Profile",
+      "description": "User account information containing username, email, and metadata.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique identifier of the user"
+        },
+        "username": {
+          "type": "string",
+          "description": "A unique lowercase username selected by the user"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The registered email address"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of account registration"
+        }
+      },
+      "required": [
+        "uid",
+        "username",
+        "email",
+        "createdAt"
+      ]
+    },
+    "usernameRecord": {
+      "title": "Username Record",
+      "description": "Mapping from username to user ID and email to ensure uniqueness and enable login lookup.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "The user ID that owns this username"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The email associated with this username"
+        }
+      },
+      "required": ["uid", "email"]
+    },
+    "verification": {
+      "title": "Verification Record",
+      "description": "Information about a file/text verification scan, including authenticity results, status, and metadata.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique record identifier"
+        },
+        "uid": {
+          "type": "string",
+          "description": "The user ID who uploaded this"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "The name of the file or content title"
+        },
+        "fileSize": {
+          "type": "string",
+          "description": "Human-readable size of the file"
+        },
+        "fileType": {
+          "type": "string",
+          "description": "The type of file (image, video, audio, text)"
+        },
+        "uploadedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of the scan"
+        },
+        "status": {
+          "type": "string",
+          "description": "COMPLETED, FAILED, or PENDING"
+        },
+        "authenticityScore": {
+          "type": "number",
+          "description": "Calculated score from 0 to 100"
+        },
+        "confidenceScore": {
+          "type": "number",
+          "description": "Calculated confidence score from 0 to 100"
+        },
+        "riskLevel": {
+          "type": "string",
+          "description": "LOW, HIGH, or CRITICAL"
+        },
+        "verdict": {
+          "type": "string",
+          "description": "Brief text explaining the final classification verdict"
+        },
+        "logs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Detailed trace logs of the analysis"
+        },
+        "technicalDetails": {
+          "type": "object",
+          "properties": {
+            "claims_identified": { "type": "array", "items": { "type": "string" } },
+            "sources_checked": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "url": { "type": "string" },
+                  "supports_claim": { "type": "boolean" }
+                }
+              }
+            },
+            "red_flags": { "type": "array", "items": { "type": "string" } },
+            "reasoning": { "type": "string" }
+          }
+        },
+        "fileContentBase64": {
+          "type": "string",
+          "description": "Optional inline small file preview content or text content"
+        }
+      },
+      "required": ["id", "uid", "fileName", "fileType", "uploadedAt", "status"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "user",
+      "description": "The collection storing all registered user profile records."
+    },
+    "usernames/{username}": {
+      "schema": "usernameRecord",
+      "description": "A lookup collection of usernames to enforce uniqueness and map usernames to emails."
+    },
+    "users/{userId}/verifications/{verificationId}": {
+      "schema": "verification",
+      "description": "Database records storing all synthetic media verifications performed by each operator."
+    }
+  }
+}

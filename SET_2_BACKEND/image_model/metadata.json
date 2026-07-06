@@ -1,0 +1,10 @@
+{
+  "name": "TruthLens AI",
+  "description": "TruthLens AI is a state-of-the-art Deepfake Forensic Audit Platform utilizing local ML metrics and Gemini API multimodal computer vision analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "efficientnet": {
+    "architecture": "efficientnet",
+    "status": "trained",
+    "lastTrained": "2026-07-03 08:45:51",
+    "epochs": 1
+  },
+  "vit": {
+    "architecture": "vit",
+    "status": "trained",
+    "lastTrained": "2026-07-03 08:45:54",
+    "epochs": 1
+  }
+}

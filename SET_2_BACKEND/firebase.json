@@ -1,0 +1,6 @@
+{
+  "firestore": {
+    "database": "ai-studio-remixtruthlensne-72a32367-9c27-4f94-a53c-e1b81ebda506",
+    "rules": "firestore.rules"
+  }
+}

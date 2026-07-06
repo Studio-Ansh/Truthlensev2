@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Rules for Users collection (Custom Auth & Sync)
+    match /users/{userId} {
+      allow read, write: if true;
+      
+      // Rules for User's nested Verifications
+      match /verifications/{verificationId} {
+        allow read, write: if true;
+      }
+    }
+    
+    // Rules for Usernames collection (Unique lookup)
+    match /usernames/{username} {
+      allow read, write: if true;
+    }
+  }
+}

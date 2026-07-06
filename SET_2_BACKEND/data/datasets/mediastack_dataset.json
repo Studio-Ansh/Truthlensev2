@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ms_001",
+    "title": "Leaked Audio: European Leader Secretly Agrees to Cede Territorial Waters for Secret Drilling Rights",
+    "content": "A high-fidelity audio leak published on decentralized video-sharing networks allegedly captures a European Prime Minister agreeing to cede vast offshore territorial zones to a foreign conglomerate in exchange for private drilling royalties. The 3-minute voice file, which sound specialists say has a high probability of being an AI voice clone, features voice patterns identical to the PM during a supposedly confidential phone call last Tuesday. Government spokespeople have issued an immediate rejection, calling it a highly coordinated deepfake cyber-attack.",
+    "source": "patriot-news-network.io",
+    "url": "https://patriot-news-network.io/prime-minister-leaked-audio",
+    "category": "Geopolitics",
+    "published_at": "2026-06-28T22:15:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 12,
+      "risk_level": "High",
+      "clickbait_index": 92,
+      "fabricated_percentage": 95,
+      "ai_generated_probability": 90,
+      "synthetic_markers": [
+        "Audio-Visual Deepfake manipulation (voice cloning artifacts)",
+        "Sensational geopolitical framing designed to trigger outrage",
+        "Lack of source validation or independent audio analysis",
+        "Distribution via unmoderated fringe platforms ('decentralized video-sharing networks')"
+      ],
+      "verdict": "Audio-Visual Deepfake / Fabricated News",
+      "explanation": "This article details a geopolitical deepfake incident where a voice clone was used to fabricate a scandalous phone call by a head of state. It highlights how synthetic audio is leveraged for information warfare to destabilize political trust."
+    }
+  },
+  {
+    "id": "ms_002",
+    "title": "United Nations General Assembly Approves Resolution on International Artificial Intelligence Safety Standards",
+    "content": "The United Nations General Assembly has officially adopted a consensus resolution outlining the first global safety and ethical guidelines for generative artificial intelligence. The resolution, co-sponsored by over 120 member states, urges developers to design AI systems that are transparent, secure, and respectful of human rights. The framework establishes a voluntary registry for tracking advanced models and encourages international cooperation in countering deepfakes and algorithmic bias.",
+    "source": "un-dispatch.org",
+    "url": "https://un-dispatch.org/general-assembly-ai-resolution",
+    "category": "Technology",
+    "published_at": "2026-07-03T10:00:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 100,
+      "risk_level": "Low",
+      "clickbait_index": 5,
+      "fabricated_percentage": 0,
+      "ai_generated_probability": 0,
+      "synthetic_markers": [
+        "Verifiable international public resolution",
+        "Balanced and objective report of diplomatic procedures",
+        "Absence of sensationalist claims or unverified quotes",
+        "Cites official public international bodies (UN General Assembly)"
+      ],
+      "verdict": "Verified Authentic News",
+      "explanation": "This is a highly reliable report of a major global regulatory milestone. It has neutral tone, standard structure, is easily verified through official UN press services, and represents legitimate international journalism."
+    }
+  }
+]

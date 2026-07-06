@@ -1,0 +1,52 @@
+[
+  {
+    "id": "curr_001",
+    "title": "Shocking: Lemon Juice and Cayenne Pepper Diet Eradicates Diabetes in Under 48 Hours!",
+    "content": "A revolutionary cure for Type 2 Diabetes is being suppressed by major pharmaceutical companies. Clinical trials conducted by the Natural Healing Association have conclusively shown that a strict diet of warm organic lemon juice, organic cayenne pepper, and wild honey completely regenerates insulin-producing pancreatic cells. Within 48 hours, patients showed normalized blood sugar levels. Big Pharma is currently suing to have the study removed from public view to protect their multi-billion dollar insulin patents.",
+    "source": "natural-wellness-chronicle.biz",
+    "url": "https://natural-wellness-chronicle.biz/shocking-diabetes-cure",
+    "category": "Health",
+    "published_at": "2026-06-30T08:00:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 8,
+      "risk_level": "High",
+      "clickbait_index": 98,
+      "fabricated_percentage": 98,
+      "ai_generated_probability": 65,
+      "synthetic_markers": [
+        "High-risk medical misinformation and unscientific health claims",
+        "Classic conspiracy theory framing ('suppressed by major pharmaceutical companies')",
+        "Extreme clickbait punctuation and capitalizations ('Shocking:', 'Eradicates diabetes!')",
+        "Complete lack of citations to credible peer-reviewed medical journals"
+      ],
+      "verdict": "Medical Fabrication / Conspiracy Theory",
+      "explanation": "This article promotes high-risk health misinformation by claiming a simple home remedy can cure a complex chronic medical condition like diabetes in 48 hours. This is scientifically impossible and dangerous. It leverages anti-pharma conspiracy narratives to generate ad revenue through clickbait."
+    }
+  },
+  {
+    "id": "curr_002",
+    "title": "Federal Reserve Announces Interest Rate Hike to Combat Persistent Services Inflation",
+    "content": "The Federal Reserve on Wednesday raised its benchmark interest rate by a quarter-percentage point, continuing its multi-month campaign to rein in sticky consumer price increases. In a press conference following the Federal Open Market Committee meeting, the Chair emphasized that while goods inflation has stabilized, service-sector expenditures remain elevated. Markets reacted with minor volatility, with the S&P 500 sliding 0.3% following the announcement. Financial analysts anticipate one additional minor adjustment before the end of the fiscal year.",
+    "source": "financial-times-report.com",
+    "url": "https://financial-times-report.com/fed-interest-rate-hike-june",
+    "category": "Finance",
+    "published_at": "2026-07-01T18:30:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 100,
+      "risk_level": "Low",
+      "clickbait_index": 5,
+      "fabricated_percentage": 0,
+      "ai_generated_probability": 0,
+      "synthetic_markers": [
+        "Highly precise and factual banking reporting",
+        "Mentions real institutions (Federal Open Market Committee, S&P 500)",
+        "Objective, neutral, and matter-of-fact writing style",
+        "Contains standard economic analysis verified by market records"
+      ],
+      "verdict": "Verified Authentic News",
+      "explanation": "This is a factual and standard financial report. It lists verifiable economic events, features standard terminology, has an objective tone, and presents zero risk markers or clickbait indicators."
+    }
+  }
+]

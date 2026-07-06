@@ -1,0 +1,2 @@
+TRUTHLENS_MODEL_WEIGHTS_V1
+{"architecture": "vit", "epochs_trained": 1, "accuracy": 0.94}

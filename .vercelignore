@@ -1,0 +1,7 @@
+image_model/
+video_model/
+models/
+*.pt
+__pycache__/
+train.py
+evaluate.py

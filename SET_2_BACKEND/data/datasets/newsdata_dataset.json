@@ -1,0 +1,27 @@
+[
+  {
+    "id": "nd_001",
+    "title": "MUST WATCH: Local Mayor Caught on Video Admitting Election Fraud Scheme Using Smart Thermostats!",
+    "content": "A grainy cellphone video leaked on social media allegedly shows the Mayor of Pine Creek admitting to using smart home thermostats to transmit falsified vote tallies during the municipal elections. The poster of the video claims that a secret microchip inside popular home energy appliances was activated via public Wi-Fi to redirect up to 12% of the votes. The Mayor's office has stated the video is a deepfake made using open-source face-swapping software during a standard city council budget review meeting.",
+    "source": "pine-creek-patriot.com",
+    "url": "https://pine-creek-patriot.com/mayor-caught-video-fraud-thermostats",
+    "category": "Geopolitics",
+    "published_at": "2026-07-02T16:00:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 5,
+      "risk_level": "High",
+      "clickbait_index": 99,
+      "fabricated_percentage": 99,
+      "ai_generated_probability": 85,
+      "synthetic_markers": [
+        "Sensational clickbait pre-headline ('MUST WATCH')",
+        "Technologically absurd claims (election fraud via smart home thermostats)",
+        "Deepfake manipulation (grainy face-swap video confirmed by forensic signatures)",
+        "Severe misinformation targeting local election integrity"
+      ],
+      "verdict": "Deepfake Video / Fabricated Conspiracy",
+      "explanation": "This article spreads election misinformation using a deepfake video. The claims are technologically absurd (manipulating voting machines/slates via domestic smart thermostats). This highlights the intersection of deepfakes and civic misinformation."
+    }
+  }
+]

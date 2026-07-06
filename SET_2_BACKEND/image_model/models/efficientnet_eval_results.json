@@ -1,0 +1,16 @@
+{
+  "architecture": "efficientnet",
+  "evaluationDate": "2026-07-03 08:45:56",
+  "accuracy": 0.905,
+  "precision": 0.912,
+  "recall": 0.895,
+  "f1Score": 0.903,
+  "fpr": 0.08,
+  "fnr": 0.11,
+  "confusionMatrix": {
+    "truePositive": 89,
+    "falseNegative": 11,
+    "falsePositive": 8,
+    "trueNegative": 92
+  }
+}

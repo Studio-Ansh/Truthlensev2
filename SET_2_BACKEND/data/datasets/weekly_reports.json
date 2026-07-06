@@ -1,0 +1,90 @@
+[
+  {
+    "id": "rep_2026_w26",
+    "week": "2026-W26",
+    "title": "Misinformation Threat Report: Rise in Smart-Appliance Civic Conspiracies and AI Medical Cures",
+    "date_range": "June 22, 2026 - June 28, 2026",
+    "summary": "This week's surveillance indicates a sharp 14% surge in civic-themed misinformation, particularly leveraging fabricated video deepfakes distributed on alt-social networks. Medical-themed clickbait remains high, with diabetes and cancer 'miracle cures' continuing to circulate on low-authority domains registered in offshore zones.",
+    "stats": {
+      "total_scanned_articles": 142,
+      "detected_fabrications": 43,
+      "detected_clickbait": 58,
+      "average_threat_score": 64,
+      "high_risk_domains_flagged": 5
+    },
+    "top_misinformation_trends": [
+      {
+        "trend_name": "Smart Appliance Vote Tampering",
+        "category": "Geopolitics",
+        "description": "Fabrications arguing that household smart home IoT appliances (thermostats, refrigerators) are covertly carrying custom chips used to modify municipal election ballots over public Wi-Fi networks.",
+        "risk_level": "High",
+        "growth_rate": "+35%"
+      },
+      {
+        "trend_name": "Pharma Coverup Cancer Cures",
+        "category": "Health",
+        "description": "Clickbait claims that simple home diets (cayenne pepper, baking soda, specific juices) completely cure late-stage cancers within short hours, under the guise of an active industry cover-up.",
+        "risk_level": "High",
+        "growth_rate": "+8%"
+      },
+      {
+        "trend_name": "Antarctic Sub-Glacial Volcanoes",
+        "category": "Climate",
+        "description": "Sensational climate doomsday blogging alleging that Antarctic eruptions are about to melt massive portions of the ice cap causing instantaneous multi-foot global sea level rises.",
+        "risk_level": "Medium",
+        "growth_rate": "+12%"
+      }
+    ],
+    "high_risk_domains": [
+      "pine-creek-patriot.com",
+      "natural-wellness-chronicle.biz",
+      "patriot-news-network.io"
+    ],
+    "verdict_distribution": {
+      "real": 41,
+      "fabricated_news": 43,
+      "clickbait": 58
+    }
+  },
+  {
+    "id": "rep_2026_w27",
+    "week": "2026-W27",
+    "title": "Misinformation Threat Report: Tactical Audio Voice Clones of Foreign Diplomats",
+    "date_range": "June 29, 2026 - July 5, 2026",
+    "summary": "During the current week, the predominant emerging threat was the propagation of high-fidelity synthetic audio clips (voice clones) depicting European and G20 diplomats discussing non-existent offshore agreements. Clickbait targeting technology advances (e.g. DreamLens recording dreams) also experienced rapid spread among enthusiast communities.",
+    "stats": {
+      "total_scanned_articles": 198,
+      "detected_fabrications": 61,
+      "detected_clickbait": 84,
+      "average_threat_score": 71,
+      "high_risk_domains_flagged": 7
+    },
+    "top_misinformation_trends": [
+      {
+        "trend_name": "Synthetic Voice Clones of World Leaders",
+        "category": "Geopolitics",
+        "description": "Sophisticated audio-only deepfakes simulating high-level telephone discussions regarding energy deals, militarization, and trade tariffs.",
+        "risk_level": "High",
+        "growth_rate": "+45%"
+      },
+      {
+        "trend_name": "Dream recording tech breakthroughs",
+        "category": "Technology",
+        "description": "Sensational reporting on non-existent retinal contact lenses capable of cloud-streaming active dream states in high definition.",
+        "risk_level": "Medium",
+        "growth_rate": "+22%"
+      }
+    ],
+    "high_risk_domains": [
+      "patriot-news-network.io",
+      "scitech-nexus.co",
+      "natural-wellness-chronicle.biz",
+      "pine-creek-patriot.com"
+    ],
+    "verdict_distribution": {
+      "real": 53,
+      "fabricated_news": 61,
+      "clickbait": 84
+    }
+  }
+]

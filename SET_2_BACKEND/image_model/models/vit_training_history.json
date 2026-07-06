@@ -1,0 +1,9 @@
+[
+  {
+    "epoch": 1,
+    "loss": 0.1841,
+    "accuracy": 0.9229,
+    "valLoss": 0.2186,
+    "valAccuracy": 0.8983
+  }
+]

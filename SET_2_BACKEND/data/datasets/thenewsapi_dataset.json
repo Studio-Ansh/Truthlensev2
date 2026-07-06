@@ -1,0 +1,77 @@
+[
+  {
+    "id": "tna_001",
+    "title": "Unbelievable! AI-Enabled Smart Contact Lenses to Record Your Dreams and Upload to the Cloud",
+    "content": "A highly secretive tech startup backed by unnamed Swiss venture capitalists has reportedly finalized clinical testing for DreamLens, a smart contact lens that reads retinal neuro-impulses during REM sleep. According to leaked documents, users can connect their lenses to an app to sync their dreams directly to cloud servers and replay them in high-definition 4K. Cyber-analysts are warning of severe privacy breaches as third-party advertisers might purchase 'subconscious consumer preferences'. The company plans to ship globally by Q4 without FDA or international regulatory clearance.",
+    "source": "scitech-nexus.co",
+    "url": "https://scitech-nexus.co/dreams-uploaded-to-cloud",
+    "category": "Technology",
+    "published_at": "2026-07-01T12:00:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 15,
+      "risk_level": "High",
+      "clickbait_index": 85,
+      "fabricated_percentage": 90,
+      "ai_generated_probability": 95,
+      "synthetic_markers": [
+        "Sensationalist headline with clickbait markers ('Unbelievable!')",
+        "Unnamed or untraceable sources ('secretive tech startup', 'unnamed Swiss venture capitalists')",
+        "Absence of peer-reviewed scientific studies or regulatory filings",
+        "Linguistic patterns resembling synthetic writing with highly repetitive jargon"
+      ],
+      "verdict": "Fabricated News / High Clickbait",
+      "explanation": "This article describes a technologically impossible feat (recording neuro-impulses from the retina during sleep to construct 4K video) without citing any scientific studies, active patents, or known companies. The reliance on sensational framing and 'leaked documents' is a classic misinformation marker."
+    }
+  },
+  {
+    "id": "tna_002",
+    "title": "Global Logistics Giant Integrates Blockchain for Real-Time Container Tracking",
+    "content": "Global Maritime Logistics (GML) today announced the full-scale deployment of its new distributed ledger system across all major shipping corridors. The platform, developed in partnership with leading enterprise protocol firms, will log customs documentation, temperature controls, and positional data in immutable blocks. GML's Chief Operations Officer stated that this move will reduce administrative delay times by up to 35% and virtually eliminate transit documentation fraud. The project has undergone a successful six-month pilot program in North Sea routes.",
+    "source": "gml-logistics.com",
+    "url": "https://gml-logistics.com/press/blockchain-container-tracking",
+    "category": "Finance",
+    "published_at": "2026-07-02T09:15:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 98,
+      "risk_level": "Low",
+      "clickbait_index": 10,
+      "fabricated_percentage": 0,
+      "ai_generated_probability": 5,
+      "synthetic_markers": [
+        "Verifiable corporate identity and partner protocols",
+        "Specific operational metrics (35% reduction)",
+        "Grounded, professional, and dry journalistic tone",
+        "Plausible technological timeline and pilot history"
+      ],
+      "verdict": "Verified Authentic News",
+      "explanation": "This is an authentic press release concerning supply chain logistics. It lacks sensationalist headers, features official executive quotes, and references a realistic pilot program. There are zero indicators of synthetic manipulation or clickbait."
+    }
+  },
+  {
+    "id": "tna_003",
+    "title": "Scientists Discover New Water-Based Liquid That Freezes at Boiling Hot Temperatures",
+    "content": "In a historic breakthrough that defies the fundamental laws of thermodynamics, researchers at the Neo-Science Institute of Oakhaven have manufactured 'Hydro-Z', a modified water compound that remains liquid at room temperature but instantly crystallizes into solid ice when heated past 100 degrees Celsius. Lead physicist Dr. Jonathan Vance claims that the compound's hydrogen bonds undergo a complete inversion under atomic excitation, creating a 'heat-triggered solid state' which could revolutionize thermal shielding in rocket engineering.",
+    "source": "neo-science-institute.org",
+    "url": "https://neo-science-institute.org/hydro-z-thermodynamics",
+    "category": "Science",
+    "published_at": "2026-07-03T14:40:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 28,
+      "risk_level": "Medium",
+      "clickbait_index": 70,
+      "fabricated_percentage": 85,
+      "ai_generated_probability": 80,
+      "synthetic_markers": [
+        "Violation of fundamental thermodynamic physical laws",
+        "Citation of a non-existent institution ('Neo-Science Institute of Oakhaven')",
+        "Use of pseudo-scientific terminology ('atomic excitation', 'hydrogen bond inversion')",
+        "High emotional and dramatic reporting tone"
+      ],
+      "verdict": "Fabricated Scientific Misinformation",
+      "explanation": "The claim that a water-based compound freezes when heated to boiling temperature violates the fundamental laws of thermodynamics. The Oakhaven Neo-Science Institute does not exist, and 'Dr. Jonathan Vance' has no traceable academic record in thermodynamics."
+    }
+  }
+]

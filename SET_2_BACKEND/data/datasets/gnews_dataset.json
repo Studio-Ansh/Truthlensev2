@@ -1,0 +1,27 @@
+[
+  {
+    "id": "gn_001",
+    "title": "Uncovering the Truth: Has a Major Volcano Erupted in Antarctica, Threatening Global Coastlines?",
+    "content": "A sudden spike in subterranean temperatures beneath the West Antarctic Ice Sheet has researchers fearing that Mount Erebus or a newly formed subglacial super-volcano is preparing for a massive eruption. Independent climate bloggers claim that if a major eruption occurs beneath the ice, it could melt up to 30% of the continent's ice sheet within a week, raising global sea levels by over 15 feet. Authorities are accused of withholding evacuation plans for low-lying coastal cities in order to avoid widespread banking and real estate collapses.",
+    "source": "climate-truth-blog.net",
+    "url": "https://climate-truth-blog.net/antarctic-volcano-global-floods",
+    "category": "Climate",
+    "published_at": "2026-06-29T11:00:00Z",
+    "is_verified": true,
+    "analysis": {
+      "authenticity_score": 20,
+      "risk_level": "High",
+      "clickbait_index": 90,
+      "fabricated_percentage": 80,
+      "ai_generated_probability": 40,
+      "synthetic_markers": [
+        "Sensational clickbait query title ('Has a major volcano...?')",
+        "Conspiratorial claims ('authorities withholding evacuation plans')",
+        "Extreme scientific exaggeration (melting 30% of Antarctic ice in a week is physically impossible)",
+        "Reliance on unqualified independent sources ('climate bloggers')"
+      ],
+      "verdict": "Conspiracy / Fabricated Scientific Panic",
+      "explanation": "This article combines elements of real geological features (Antarctic volcanic activity) with wild, unscientific fabrications (melting 30% of the ice sheet in one week causing a 15ft sea rise). It uses conspiracy theories about government cover-ups to heighten panic and drive clickbait clicks."
+    }
+  }
+]
