@@ -147,7 +147,7 @@ Ensure a compliant `/firebase-applet-config.json` is configured in the root dire
 {
   "projectId": "studio-2293577197-e9247",
   "appId": "1:1086136839374:web:db599e1f8e80564d42b49f",
-  "apiKey": "AIzaSyA1dumsHTENLPgnOkyyI6_YSMqM0Z2EC08",
+  "apiKey": "[ENTER_YOUR_API_KEY]",
   "authDomain": "studio-2293577197-e9247.firebaseapp.com",
   "firestoreDatabaseId": "(default)",
   "storageBucket": "studio-2293577197-e9247.firebasestorage.app",
