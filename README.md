@@ -1,191 +1,242 @@
-# Truthlens Verify 🔍
+# 🔍 TruthLens v2 — Deep Technical Analysis
 
-An advanced, multi-modal neural verification platform engineered to analyze visual authenticity, detect deepfakes, trace cryptographic lineage logs, and verify factual claims in real-time. Powered by custom PyTorch forensics pipelines, Google Firestore, and state-of-the-art GenAI models (Gemini 3.5 Flash).
-
----
-
-## 🗂️ MASTER CODEBASE SETS INDEX
-
-To make this complex multi-modal platform extremely clean and easy to navigate, the codebase is strictly organized into **four logical sets** directly within the file explorer. Refer to this index to locate and manage components:
-
-```
-📦 Repository Root
- ├── 📝 README.md                           <-- Master Index & Documentation (Top Level)
- │
- ├── 🎨 [SET 1] FRONTEND (SET_1_FRONTEND/)
- │    └── src/
- │         ├── App.tsx                      <-- Primary View Controller, Theme Layout & Routing (Single Main File)
- │         ├── main.tsx                     <-- Vite entrypoint & render mount
- │         ├── index.css                    <-- Tailwind CSS v4 variables & custom animations
- │         ├── components/                  <-- Interactive HUD Widgets & Visualizers
- │         │    ├── TelemetryPlayground.tsx
- │         │    ├── LoginScreen.tsx
- │         │    ├── InteractivePhysicsLogo.tsx
- │         │    ├── BackgroundGraphics.tsx
- │         │    ├── AIPipelineGraph.tsx
- │         │    └── ThreeQuestionCards.tsx
- │         └── lib/
- │              ├── api.ts                  <-- Frontend API proxy caller
- │              └── firebase.ts             <-- Client-side Firebase/Firestore initializer
- │
- ├── ⚙️ [SET 2] BACKEND (SET_2_BACKEND/)
- │    ├── server.ts                         <-- Centralized API Router, Heuristic Engines & File Ingress (Single File)
- │    ├── train.py                          <-- Neural network training harness
- │    ├── evaluate.py                       <-- Pipeline validation metrics harness
- │    ├── data/                             <-- Curated datasets and scanner archives
- │    ├── image_model/                      <-- Image forensic CNN pipeline files
- │    ├── video_model/                      <-- Video deepfake detection pipeline files
- │    ├── models/                           <-- PyTorch model weight file registries
- │    ├── firebase.json                     <-- Firebase emulator and resource configurations
- │    ├── firestore.rules                   <-- Firestore read/write collection security rules
- │    ├── DRAFT_firestore.rules             <-- Draft security rule reference
- │    ├── firebase-blueprint.json           <-- Security and schema specifications
- │    └── firebase-applet-config.json       <-- Applet database connection credentials
- │
- ├── 🚀 [SET 3] DEPLOYMENT CONFIGURATIONS (At Root)
- │    ├── package.json                      <-- Build manifest, dependency list, and scripts
- │    ├── tsconfig.json                     <-- TypeScript compiler configurations
- │    ├── vite.config.ts                    <-- Frontend asset compilation configurations
- │    └── vercel.json                       <-- Serverless deployment and route redirect rules
- │
- └── 🐙 [SET 4] GIT & ENVIRONMENT IGNORES (At Root)
-      ├── .gitignore                        <-- Global Git ignore criteria
-      └── .vercelignore                     <-- Production build file exclusion filters
-```
-
-### Detailed Sets Overview:
-
-1. **🎨 Frontend Set** (`SET_1_FRONTEND/`):
-   All UI elements, custom interactive physics animations, and forensic metrics graphs are written in modular React 19 + Tailwind CSS.
-   * *Central Command*: `SET_1_FRONTEND/src/App.tsx` controls the overall HUD view-manager, state machine, and section-by-section layout logic.
-
-2. **⚙️ Backend Set** (`SET_2_BACKEND/`):
-   Consolidated into a robust Express server. Handles file ingestion buffers, runs local python forensics subprocesses, and securely proxies request pipelines to the Gemini 3.5 Flash API. This folder also houses all backend Firebase database connection secrets, security rulesets, and blueprints.
-   * *Central Command*: All backend logic resides cleanly within `SET_2_BACKEND/server.ts` for simple, offline-capable code execution.
-
-3. **🚀 Deployment Set** (Project Root):
-   Manages production bundling (compiling backend code to a self-contained `dist/server.cjs` with `esbuild` and bundling the frontend static assets via `vite build`), environment routing, and Firebase integration.
-
-4. **🐙 Git / Ignore Set** (Project Root):
-   Defines standard exclusions to prevent heavy ML weight files (`*.pt`, model checkpoints) and sensitive local environment files (`.env`) from leaking into public repository hosts or deployment instances.
+> **Repo**: [github.com/Studio-Ansh/Truthlensev2](https://github.com/Studio-Ansh/Truthlensev2)  
+> **Live App**: [remix-remix-truthlensnew-688132236117.us-west1.run.app](https://remix-remix-truthlensnew-688132236117.us-west1.run.app/)  
+> **Description**: AI-based multi-modal verification platform — analyze images, videos, audio, and news claims for authenticity.
 
 ---
 
-## 🌟 Core System Capabilities
+## 🧭 What Is TruthLens v2?
 
-### 1. Multi-Modal Forensics Pipelines
-- **Visual Authentication (Images)**: High-resolution texture and frequency-domain check utilizing a hybrid **EfficientNetB4** & **ViT (Vision Transformer)** neural architecture. Detects generative infills, diffusion boundary anomalies, lighting mismatches, and edge-refraction artifacts.
-- **Spatio-Temporal Analysis (Videos)**: Frame-by-frame analysis with a **ResNeXt50-Bi-LSTM** sequence model. Tracks micro-expressions, lip-sync alignment, and temporal jitter to detect modern face-swaps.
-- **Acoustic Fingerprinting (Audio)**: Analyzes voice pitch contours, spectral integrity, and phase coherence to flag voice-cloning networks or neural vocoder synthesis.
-- **Cognitive Fallback Engine**: Standardized heuristic evaluation filters and rule-based verification when remote API networks or pipeline scripts are disconnected.
+TruthLens v2 is an **advanced, multi-modal neural verification platform** that lets users submit:
+- 📸 **Images** → Deepfake / AI-generation detection
+- 🎥 **Videos** → Temporal face-swap detection
+- 🔊 **Audio** → Voice-clone / neural vocoder detection
+- 📰 **Text / News claims** → Real-time fact verification
 
-### 2. Real-Time Fact & News Verification
-- **Aggregated Dataset Scanning**: Cross-references user queries instantly against high-precision curated rumor datasets (`TheNewsAPI`, `Currents`, `Mediastack`, `GNews`, `NewsData`).
-- **Semantic Search Grounding**: Leverages Google Search Grounding through Gemini to dynamically parse context integrity and assign reliability ratings.
-- **Domain Monitoring**: Dynamically updates risk profiles for newly flagged sources in a centralized host database.
-
-### 3. Verification Log & User Telemetry
-- **Cloud-Synced History**: Secure, lightweight user session tracking with persistent verification histories.
-- **Durable Storage**: Utilizes Google Cloud Firestore for tracking scanning histories, confidence percentages, threat categories, and generated report links.
-- **Authenticity Audit Logs**: Renders full JSON metadata tracing backbones used, confidence tiers, and red flag lists.
-
-### 4. Interactive Immersive User Interface
-- **Modern Spatial Design**: A dark, high-contrast visual theme designed for heavy forensics monitoring.
-- **AI Pipeline Visualizer**: Renders interactive canvas nodes showing computational layers (Inference Engine, Cognitive Grounding, Neural Decoders).
-- **Physics-Informed Aesthetics**: Subtle, high-performance web animations, interactive canvas graphics, and responsive particle effects driven by modern physics math.
+It returns a unified **Trust Score**, detailed breakdown logs, and an audit trail stored in Google Firestore.
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## 🏗️ System Architecture
 
-### Frontend Layer
-- **Framework**: React 19 + TypeScript (strictly typed)
-- **Styling**: Tailwind CSS v4 (offering rapid fluid layout engines and deep system styling variables)
-- **Motion**: Framer Motion v12 (`motion/react`) for smooth page transitions and responsive user feedback loops
-- **Icons**: Lucide React for consistent display indicators
+```mermaid
+graph TD
+    USER["👤 User\n(Browser)"] --> FE["🎨 Frontend\nReact 19 + Vite"]
+    FE --> API["⚙️ Express Backend\nSET_2_BACKEND/server.ts"]
+    
+    API --> GEMINI["🤖 Gemini 3.5 Flash\n(Google GenAI SDK)"]
+    API --> PY["🐍 Local PyTorch Scripts\n(Image + Video + Audio)"]
+    API --> DATASETS["📦 JSON Datasets\n(TheNewsAPI, GNews, etc.)"]
+    API --> HEURISTIC["🔁 Cognitive Fallback Engine\n(Rule-based offline mode)"]
 
-### Backend Layer
-- **Runtime**: Node.js + Express + `tsx` for TypeScript execution
-- **File Ingress**: Multer (configured with 100MB buffer memory limit)
-- **Deep Learning Pipelines**: Local Python3 scripts running PyTorch inference engines to evaluate visual artifacts
-- **AI Orchestration**: Official `@google/genai` TypeScript SDK (utilizing Gemini 3.5 Flash for advanced visual forensics and real-time grounding)
+    GEMINI --> RESULT["📊 Trust Score + Verdict"]
+    PY --> RESULT
+    DATASETS --> RESULT
+    HEURISTIC --> RESULT
 
-### Persistent Services
-- **Database**: Cloud Firestore (NoSQL Document database representing user records, monitored domains, and telemetry details)
-- **Authentication**: Firebase Auth integration (custom username lookup mappings for smooth onboarding)
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- **Node.js** (v18 or higher)
-- **npm** (v9 or higher)
-- **Python 3.10+** (if executing native PyTorch verification scripts locally)
-
-### Installation
-
-1. Install project dependencies:
-   ```bash
-   npm install
-   ```
-
-2. (Optional) Install local PyTorch and requirements for physical script analysis:
-   ```bash
-   pip install -r video_model/requirements.txt
-   ```
-
-### Environment Configuration
-
-Configure your environment variables by copying `.env.example` to `.env`:
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-Ensure a compliant `/firebase-applet-config.json` is configured in the root directory:
-```json
-{
-  "projectId": "studio-2293577197-e9247",
-  "appId": "1:1086136839374:web:db599e1f8e80564d42b49f",
-  "apiKey": "[ENTER_YOUR_API_KEY]",
-  "authDomain": "studio-2293577197-e9247.firebaseapp.com",
-  "firestoreDatabaseId": "(default)",
-  "storageBucket": "studio-2293577197-e9247.firebasestorage.app",
-  "messagingSenderId": "1086136839374"
-}
+    RESULT --> FIRESTORE["🗄️ Google Firestore\n(Scan History & Telemetry)"]
+    RESULT --> FE
 ```
 
 ---
 
-## 💻 Development & Deployment Commands
+## 🤖 AI Models Used
 
-- **Start Development Server**: Runs the Express backend server on Port `3000` with hot-reloaded dev assets served through Vite:
-  ```bash
-  npm run dev
-  ```
+### 1. 🖼️ Image Deepfake Detector — Hybrid CNN + Transformer
+| Property | Detail |
+|----------|--------|
+| **Architecture** | Hybrid: **EfficientNet-B4** + **ViT (Vision Transformer)** |
+| **Framework** | PyTorch |
+| **Task** | Binary classification: `REAL` vs `FAKE` |
+| **What It Detects** | Generative infills, diffusion boundary anomalies, lighting mismatches, edge-refraction artifacts |
+| **Training Data** | Kaggle: `artifact-dataset`, `deepfake-and-real-images`, `real-and-fake-face-detection` |
+| **Label Mapping** | `0 = REAL/ORIGINAL/AUTHENTIC` · `1 = FAKE/SYNTHETIC/MANIPULATED` |
+| **Checkpoint Files** | `checkpoints/truthlens_efficientnet_epoch_N.pt` / `truthlens_vit_epoch_N.pt` |
+| **Evaluation** | Accuracy, Precision, Recall, F1-score, Confusion Matrix (via `sklearn`) |
 
-- **Build Production Bundle**: Compiles TypeScript backend files using `esbuild` into a unified CommonJS target `dist/server.cjs` and processes frontend static assets into `dist/`:
-  ```bash
-  npm run build
-  ```
-
-- **Run Production App**: Launches the standalone, compiled server with production environment bindings:
-  ```bash
-  npm run start
-  ```
-
-- **Verify Type Safety & Integrity**: Run the linter to ensure syntax compliance:
-  ```bash
-  npm run lint
-  ```
+**Why EfficientNet-B4 + ViT together?**
+- EfficientNet-B4 = excellent at local texture artifacts (compression, blurring, GAN seams)
+- ViT = captures long-range spatial relationships (global lighting, facial symmetry)
+- Together they cover both micro-level and macro-level manipulation signals
 
 ---
 
-## 🔒 Security & Data Isolation
+### 2. 🎥 Video Deepfake Detector — Spatio-Temporal Network
+| Property | Detail |
+|----------|--------|
+| **Architecture** | **ResNeXt50 + Bi-LSTM** (Bidirectional LSTM) |
+| **Framework** | PyTorch |
+| **Task** | Frame-by-frame deepfake detection with temporal coherence tracking |
+| **What It Detects** | Micro-expression inconsistencies, lip-sync misalignment, temporal jitter, face-swap artifacts across time |
+| **Data** | `SET_2_BACKEND/video_model/` pipeline |
 
-- **Server-Side API Proxies**: All API credentials and model keys remain isolated on the Express server (`server.ts`). Browser clients communicate solely via clean backend routes (`/api/*`), completely safeguarding system keys from devtools inspector exposure.
-- **Firestore Security Rules**: Security guidelines restrict and secure read/write paths, maintaining robust data isolation for individual operators.
+**Why ResNeXt50 + Bi-LSTM?**
+- ResNeXt50 extracts per-frame spatial features (CNN backbone)
+- Bi-LSTM processes them as a time sequence in both forward and backward directions — crucial for catching temporal inconsistencies in video deepfakes that CNN-only models miss
 
 ---
 
-*Engineered with precision for the Truthlens Open Media Initiative.*
+### 3. 🔊 Audio Deepfake Detector — Acoustic Fingerprinting
+| Property | Detail |
+|----------|--------|
+| **What It Analyzes** | Voice pitch contours, spectral integrity, phase coherence |
+| **Detects** | Voice-cloning networks, neural vocoder synthesis (e.g., WaveNet, HiFi-GAN outputs) |
+| **Location** | Referenced in README; inference handled by backend pipeline |
+
+---
+
+### 4. 🤖 Gemini 3.5 Flash — LLM Orchestration Engine
+| Property | Detail |
+|----------|--------|
+| **Model** | `gemini-3.5-flash` via `@google/genai` TypeScript SDK |
+| **Role** | Primary AI for advanced visual forensics, fact-checking, and real-time grounding |
+| **Features Used** | **Google Search Grounding** for live semantic context verification |
+| **Fallback** | If API key absent or service down → local heuristic engine activates |
+| **Retry Logic** | Exponential backoff (up to 2 retries with 1s/2s delays) |
+
+---
+
+### 5. 🧠 Cognitive Fallback Engine — Rule-Based Offline AI
+When network/API is unavailable, a local heuristic engine activates:
+- Keyword scoring for **extreme fabrication** (`conspiracy`, `hoax`, `secret cure`, `aliens landed`, etc.)
+- **Clickbait detection** (`you won't believe`, `mind-blowing`, `gone viral`, etc.)
+- **High-risk topic flags** (`miracle cure`, `rigged election without proof`, etc.)
+- Returns: `credibility_score`, `verdict_label` (`Likely Real / Uncertain / Likely Fake`), `confidence_tier`
+
+---
+
+## 📰 News Verification Pipeline
+
+Real-time fact-checking using **5 aggregated news datasets**:
+
+```
+Datasets (JSON, cached in memory):
+├── TheNewsAPI dataset
+├── Currents dataset
+├── Mediastack dataset
+├── GNews dataset
+└── NewsData dataset
+```
+
+**How it works:**
+1. User submits a claim/headline
+2. **Step 1** — Exact/substring match against all 5 datasets (title + content)
+3. **Step 2** — If no match, **Gemini 3.5 Flash with Google Search Grounding** dynamically evaluates it
+4. **Step 3** — Domain risk profile updated in `monitored_domains.json`
+5. **Step 4** — Result logged to **Firestore** with confidence %, verdict, and red flag list
+
+---
+
+## 🗄️ Data Storage (Google Firestore)
+
+| Collection | Contents |
+|------------|----------|
+| User Sessions | Auth history, username mappings |
+| Scan History | Verification records with confidence %, verdict, media type |
+| Monitored Domains | Risk profiles per domain (avg authenticity, risk level, alert status) |
+| Verified History | Full audit logs with backbone used, red flags, confidence tier |
+| Weekly Reports | Aggregated telemetry by ISO week number |
+
+---
+
+## 🎨 Frontend Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Framework** | React 19 + TypeScript (strict mode) |
+| **Bundler** | Vite |
+| **Styling** | Tailwind CSS v4 |
+| **Animations** | Framer Motion v12 (`motion/react`) |
+| **Icons** | Lucide React |
+| **State** | App.tsx central HUD view-manager state machine |
+
+**Key UI Components:**
+- `TelemetryPlayground.tsx` — Live scanning telemetry dashboard
+- `AIPipelineGraph.tsx` — Interactive canvas visualizing AI inference nodes
+- `InteractivePhysicsLogo.tsx` — Physics-based animated logo
+- `BackgroundGraphics.tsx` — Particle effect backgrounds
+- `ThreeQuestionCards.tsx` — Submission interface (image / video / text)
+- `LoginScreen.tsx` — Firebase Auth-powered login
+
+---
+
+## ⚙️ Backend Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Runtime** | Node.js + Express |
+| **Language** | TypeScript (executed via `tsx`) |
+| **File Upload** | Multer (100MB memory buffer) |
+| **AI SDK** | `@google/genai` v2.4+ |
+| **ML Inference** | Python 3.10+ subprocess calls (`child_process.exec`) |
+| **ML Framework** | PyTorch (EfficientNet, ViT, ResNeXt50, Bi-LSTM) |
+| **Build** | esbuild → single `dist/server.cjs` |
+
+---
+
+## 🔒 Security Design
+
+| Mechanism | Detail |
+|-----------|--------|
+| **API Key Isolation** | All Gemini/Firebase keys stay server-side in `server.ts`. Client only calls `/api/*` routes |
+| **File Upload Safety** | Multer restricts to 100MB; files stored in memory only (no disk write) |
+| **Firestore Rules** | Per-user read/write isolation via `firestore.rules` |
+| **Git Safety** | `.gitignore` excludes `*.pt` model weights and `.env` secrets |
+| **Vercel Safety** | `.vercelignore` prevents ML weight files from entering production build |
+
+---
+
+## 🚀 Deployment
+
+| Target | Method |
+|--------|--------|
+| **Cloud Run** | Live at `us-west1.run.app` |
+| **Vercel** | `vercel.json` config for serverless routes |
+| **Dev** | `npm run dev` — tsx backend + Vite HMR on Port 3000 |
+| **Build** | `npm run build` — Vite frontend + esbuild backend → `dist/` |
+| **Start** | `npm run start` — runs compiled `dist/server.cjs` |
+
+---
+
+## 🔄 End-to-End Data Flow
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant FE as React Frontend
+    participant BE as Express Backend
+    participant GEM as Gemini 3.5 Flash
+    participant PY as PyTorch Scripts
+    participant FS as Firestore
+
+    U->>FE: Upload image/video/audio or enter claim
+    FE->>BE: POST /api/verify/* (multipart or base64)
+    BE->>PY: Spawn Python subprocess (if local model available)
+    PY-->>BE: Authenticity score + artifacts list
+    BE->>GEM: Send file + prompt (with Google Search Grounding)
+    GEM-->>BE: Verdict + explanation + sources
+    BE->>FS: Write scan log + update domain profile
+    FS-->>BE: Confirmed
+    BE-->>FE: JSON { trust_score, verdict, red_flags, audit_log }
+    FE-->>U: Render Trust Score HUD + breakdown
+```
+
+---
+
+## 📊 Codebase Stats
+
+| Metric | Value |
+|--------|-------|
+| **Total Commits** | 7 |
+| **Language** | TypeScript 66.5% · Python 30% · CSS 3.2% · HTML 0.3% |
+| **Structure Sets** | 4 (Frontend / Backend / Deploy Config / Git Ignores) |
+| **Key Files** | `server.ts`, `train.py`, `evaluate.py`, `App.tsx` |
+| **AI Models** | 4 (EfficientNetB4, ViT, ResNeXt50+BiLSTM, Gemini Flash) |
+| **News APIs** | 5 (TheNewsAPI, Currents, Mediastack, GNews, NewsData) |
+
+> [!NOTE]
+> The PyTorch model weights (`.pt` files) are excluded from the repo via `.gitignore`. You need to run `train.py` against a real dataset (FaceForensics++, DFDC, Celeb-DF v2) to generate them locally before the local inference scripts work. Gemini API works out-of-the-box with just an API key.
+
+> [!TIP]
+> The platform has a smart **dual-mode** design: when Gemini API key is set, it uses full LLM-powered analysis. When offline or key is missing, the local heuristic fallback engine activates automatically — making it resilient.
